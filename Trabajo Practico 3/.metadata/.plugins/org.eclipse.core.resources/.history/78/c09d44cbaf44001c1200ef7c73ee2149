@@ -31,8 +31,7 @@ int main()
     int opcionDataText;
     int opcionText;
     int opcionBin;
-    Employee* empleadoID;
-    int idEmpleado = 0;
+    int cantidad = 0;
 
     LinkedList* listaEmpleados = ll_newLinkedList();
 
@@ -46,9 +45,7 @@ int main()
 				if(controller_loadFromText("data.csv", listaEmpleados) != 0){
 					printf("\nLos datos del archivo se cargaron en la Lista");
 					flagText = 1;
-					empleadoID = ll_get(listaEmpleados, ll_len(listaEmpleados) - 1);
-					employee_getId(empleadoID, &idEmpleado);
-
+					cantidad = ll_len(listaEmpleados);
 				}
 				else{
 					printf("\nHubo un problema para cargar los datos");
@@ -69,8 +66,7 @@ int main()
     				if(controller_removeAllEmployes(listaEmpleados) != 0 && controller_loadFromText("data.csv", listaEmpleados) != 0){
     					printf("\nLos datos del archivo cargados en la Lista, y los datos previos fueron sobreescritos.");
     					flagText = 1;
-    					empleadoID = ll_get(listaEmpleados, ll_len(listaEmpleados) - 1);
-    					employee_getId(empleadoID, &idEmpleado);
+    					cantidad = ll_len(listaEmpleados);
     				}
     			}
     			else{
@@ -99,8 +95,7 @@ int main()
     				if(controller_removeAllEmployes(listaEmpleados) != 0 && controller_loadFromBinary("dataBin.bin", listaEmpleados) != 0){
     					printf("\nLos datos del archivo binario cargados en la Lista, y los datos previos fueron sobreescritos.");
     					flagText = 1;
-    					empleadoID = ll_get(listaEmpleados, ll_len(listaEmpleados) - 1);
-    					employee_getId(empleadoID, &idEmpleado);
+    					cantidad = ll_len(listaEmpleados);
     				}
 					else{
 						printf("\nHubo un prolema para cargar datos del archivo binario");
@@ -122,7 +117,7 @@ int main()
     			printf("\nPrimero se deben cargar los datos del archivo para que se puedan dar de alta nuevos datos.");
     		}
     		else{
-				if(controller_addEmployee(listaEmpleados, &idEmpleado) != 0){
+				if(controller_addEmployee(listaEmpleados, &cantidad) != 0){
 					printf("\nAlta exitosa");
 					flagAlta = 1;
 				}

@@ -75,7 +75,7 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
  * \return int
  *
  */
-int controller_addEmployee(LinkedList* pArrayListEmployee, int* idEmployee)
+int controller_addEmployee(LinkedList* pArrayListEmployee, int* cantidad)
 {
 	Employee* nuevoEmpleado = NULL;
 	int exito = 0;
@@ -85,11 +85,11 @@ int controller_addEmployee(LinkedList* pArrayListEmployee, int* idEmployee)
 
 	if(pArrayListEmployee != NULL){
 
-		(*idEmployee)++;
+		(*cantidad)++;
 
 		printf("\n\tAlta Empleado\n\n");
 
-		printf("El ID del nuevo Empleado es: %d", *idEmployee);
+		printf("El ID del nuevo Empleado es: %d", *cantidad);
 
 		printf("\nIngrese nombre del Empleado: ");
 		fflush(stdin);
@@ -118,7 +118,7 @@ int controller_addEmployee(LinkedList* pArrayListEmployee, int* idEmployee)
 			scanf("%d", &sueldo);
 		}
 
-		nuevoEmpleado = employee_newParametros(*idEmployee, nombre, horasTrabajadas, sueldo);
+		nuevoEmpleado = employee_newParametros(*cantidad, nombre, horasTrabajadas, sueldo);
 
 		if(nuevoEmpleado != NULL){
 

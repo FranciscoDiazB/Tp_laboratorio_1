@@ -2310,3 +2310,35 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
 gcc "-LD:\\TP 3 PRACTICO\\tp3_windows" -o tp3_windows.exe Controller.o Employee.o main.o parser.o -lLinkedList 
 Info: Nothing to build for tp3_windows
+Info: Nothing to build for tp3_windows
+Info: Nothing to build for tp3_windows
+15:33:39 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:92:46: error: 'cantidad' undeclared (first use in this function)
+   printf("El ID del nuevo Empleado es: %d", *cantidad);
+                                              ^~~~~~~~
+..\Controller.c:92:46: note: each undeclared identifier is reported only once for each function it appears in
+15:33:55 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:121:43: error: 'cantidad' undeclared (first use in this function)
+   nuevoEmpleado = employee_newParametros(*cantidad, nombre, horasTrabajadas, sueldo);
+                                           ^~~~~~~~
+..\Controller.c:121:43: note: each undeclared identifier is reported only once for each function it appears in
+15:34:08 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:34:9: warning: unused variable 'cantidad' [-Wunused-variable]
+     int cantidad = 0;
+         ^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LD:\\TP 3 PRACTICO\\tp3_windows" -o tp3_windows.exe Controller.o Employee.o main.o parser.o -lLinkedList 
+15:34:22 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LD:\\TP 3 PRACTICO\\tp3_windows" -o tp3_windows.exe Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows

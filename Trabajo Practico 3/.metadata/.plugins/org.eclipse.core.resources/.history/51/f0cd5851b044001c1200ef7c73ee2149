@@ -31,6 +31,7 @@ int main()
     int opcionDataText;
     int opcionText;
     int opcionBin;
+    int cantidad = 0;
     Employee* empleadoID;
     int idEmpleado = 0;
 

@@ -118,7 +118,7 @@ int controller_addEmployee(LinkedList* pArrayListEmployee, int* idEmployee)
 			scanf("%d", &sueldo);
 		}
 
-		nuevoEmpleado = employee_newParametros(*idEmployee, nombre, horasTrabajadas, sueldo);
+		nuevoEmpleado = employee_newParametros(*cantidad, nombre, horasTrabajadas, sueldo);
 
 		if(nuevoEmpleado != NULL){
 
